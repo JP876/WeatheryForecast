@@ -110,6 +110,14 @@ app.get('/api/getCity', getCachedHome, limiter, async (req, res) => {
     }
 });
 
+app.get('/api/secret', async (req, res) => {
+    try {
+        return res.json({ key: process.env.API_KEY });
+    } catch (err) {
+        console.error(err);
+    }
+});
+
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => `Server running on port ${port}`);
