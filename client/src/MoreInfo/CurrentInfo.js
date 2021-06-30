@@ -5,16 +5,8 @@ import useStyles from '../styles/CurrentInfoStyles';
 
 function CurrentInfo(props) {
     const classes = useStyles();
-    const {
-        dt,
-        temp,
-        feels_like,
-        sunrise,
-        sunset,
-        humidity,
-        weather,
-        clouds,
-    } = props.data.current;
+    const { dt, temp, feels_like, sunrise, sunset, humidity, weather, clouds } =
+        props.data.current;
     const { city, country } = props.data.location;
 
     return (
@@ -31,7 +23,7 @@ function CurrentInfo(props) {
                 {weather.map(icon => (
                     <div className={classes.icon} key={icon.description}>
                         <img
-                            src={`http://openweathermap.org/img/wn/${icon.icon}@4x.png`}
+                            src={`https://openweathermap.org/img/wn/${icon.icon}@4x.png`}
                             alt={icon.description}
                         />
                         <h3>{icon.description}</h3>

@@ -12,11 +12,10 @@ function Graph(props) {
 
     const tooltip = useCallback(
         ({ series, seriesIndex, dataPointIndex }) => {
-            let { feels_like, weather, humidity, pop, uvi, clouds, temp } = data[
-                dataPointIndex
-            ];
+            let { feels_like, weather, humidity, pop, uvi, clouds, temp } =
+                data[dataPointIndex];
 
-            let icon = `http://openweathermap.org/img/wn/${weather[0].icon}@4x.png`;
+            let icon = `https://openweathermap.org/img/wn/${weather[0].icon}@4x.png`;
             let iconDescription = weather[0].description;
             let feelLike = feels_like.day;
             let avgTemp = temp.day;

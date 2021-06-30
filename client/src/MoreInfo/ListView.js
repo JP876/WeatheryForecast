@@ -37,7 +37,7 @@ const ListView = props => {
                             <h4 className={classes.date}>{convertUnix(el.dt, format)}</h4>
                             <img
                                 className={classes.iconImg}
-                                src={`http://openweathermap.org/img/wn/${el.weather[0].icon}@4x.png`}
+                                src={`https://openweathermap.org/img/wn/${el.weather[0].icon}@4x.png`}
                                 alt={el.weather[0].description}
                             />
                             <h4 className={classes.descriptionIcon}>
