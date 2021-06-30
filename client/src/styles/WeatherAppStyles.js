@@ -25,10 +25,7 @@ const useStyles = makeStyles(theme => ({
             width: `calc(100% - ${drawerWidth * 0.85}px)`,
             marginLeft: drawerWidth * 0.85,
         },
-        /* [theme.breakpoints.down('sm')]: {
-            width: `calc(100% - ${drawerWidth * 0.7}px)`,
-            marginLeft: drawerWidth * 0.7,
-        }, */
+
         [theme.breakpoints.down('sm')]: {
             width: '100%',
         },
@@ -50,9 +47,7 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('md')]: {
             width: drawerWidth * 0.85,
         },
-        /* [theme.breakpoints.down('sm')]: {
-            width: drawerWidth * 0.7,
-        }, */
+
         [theme.breakpoints.down('sm')]: {
             width: '0px',
         },
@@ -62,9 +57,7 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('md')]: {
             width: drawerWidth * 0.85,
         },
-        /* [theme.breakpoints.down('sm')]: {
-            width: drawerWidth * 0.7,
-        }, */
+
         [theme.breakpoints.down('sm')]: {
             width: '100%',
         },
@@ -88,9 +81,6 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('md')]: {
             marginLeft: -(drawerWidth * 0.85),
         },
-        /* [theme.breakpoints.down('sm')]: {
-            marginLeft: -(drawerWidth * 0.7),
-        }, */
         [theme.breakpoints.down('sm')]: {
             marginLeft: '0px',
         },
@@ -130,13 +120,16 @@ const useStyles = makeStyles(theme => ({
         backgroundPosition: 'center center',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         alignContent: 'center',
-        padding: '0 3rem 6rem 3rem',
+        padding: '4rem 2rem 0 2rem',
         textAlign: 'center',
 
+        [theme.breakpoints.down('md')]: {
+            paddingTop: '2rem',
+        },
         [theme.breakpoints.down('sm')]: {
-            padding: '0 2rem 6rem 2rem',
+            padding: '0',
         },
 
         '& h1': {
@@ -146,23 +139,16 @@ const useStyles = makeStyles(theme => ({
             fontWeight: theme.typography.fontWeightMedium,
             marginBottom: '1.4rem',
         },
-
-        '& h4': {
-            fontSize: '.86rem',
-            fontWeight: theme.typography.fontWeightLight,
-            textAlign: 'center',
-            color: theme.palette.secondary.main,
-            margin: '.6rem 0',
-        },
-
+    },
+    introContainer: {
         '& button': {
             width: '60%',
             margin: '-2rem auto 0 auto',
             padding: '.4rem 1.4rem',
 
             [theme.breakpoints.down('sm')]: {
-                width: '80%',
-                margin: '-4rem auto 0 auto',
+                width: '72%',
+                margin: '0 auto',
             },
 
             '& span': {
@@ -176,6 +162,18 @@ const useStyles = makeStyles(theme => ({
                 },
             },
         },
+        '& h4': {
+            fontSize: '.86rem',
+            fontWeight: theme.typography.fontWeightLight,
+            textAlign: 'center',
+            color: theme.palette.secondary.main,
+            margin: '.6rem 0',
+
+            [theme.breakpoints.down('sm')]: {
+                margin: '0',
+                marginTop: '.4rem',
+            },
+        },
     },
     introImg: {
         backgroundImage: `url(${homeImg})`,
@@ -185,8 +183,61 @@ const useStyles = makeStyles(theme => ({
         height: '30rem',
         margin: '0 1rem',
 
+        [theme.breakpoints.down('md')]: {
+            height: '26rem',
+            width: '96%',
+            margin: '0 auto',
+        },
         [theme.breakpoints.down('sm')]: {
-            margin: '0',
+            height: '20rem',
+            width: '90%',
+            margin: '0 auto',
+        },
+    },
+    copyright: {
+        width: '100%',
+        marginBottom: '1.6rem',
+
+        '& div': {
+            '&:last-of-type': {
+                marginBottom: '.4rem',
+            },
+        },
+
+        [theme.breakpoints.down('sm')]: {
+            marginBottom: '.4rem',
+        },
+
+        '& h4': {
+            display: 'inline-block',
+            fontWeight: theme.typography.fontWeightMedium,
+            color: theme.palette.text.primary,
+            margin: '.1rem',
+
+            '& span': {
+                color: theme.palette.primary.main,
+            },
+            '&:last-child': {
+                width: '80%',
+                paddingTop: '.4rem',
+                borderTop: `1px solid ${theme.palette.common.grey}`,
+            },
+            [theme.breakpoints.down('sm')]: {
+                fontSize: '.72rem',
+            },
+        },
+        '& a': {
+            textDecoration: 'none',
+            color: theme.palette.primary.main,
+            transition: 'all 200ms ease-in-out',
+            fontSize: 'inherit',
+
+            '&:hover': {
+                color: theme.palette.primary.darker,
+            },
+            [theme.breakpoints.down('sm')]: {
+                fontSize: '.72rem',
+            },
         },
     },
 }));

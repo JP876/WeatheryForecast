@@ -111,62 +111,50 @@ const useStyles = makeStyles(theme => ({
     copyright: {
         marginTop: '1rem',
         textAlign: 'center',
+        width: '100%',
+
+        '& div': {
+            '&:last-of-type': {
+                marginBottom: '.4rem',
+            },
+        },
+
+        [theme.breakpoints.down('sm')]: {
+            marginBottom: '.4rem',
+        },
 
         '& h4': {
+            display: 'inline-block',
             fontWeight: theme.typography.fontWeightMedium,
+            color: theme.palette.text.primary,
+            fontSize: '.9rem',
+            marginRight: '.2rem',
+
+            '&:last-child': {
+                width: '80%',
+                paddingTop: '.4rem',
+                borderTop: `1px solid ${theme.palette.common.grey}`,
+            },
+
+            [theme.breakpoints.down('sm')]: {
+                fontSize: '.72rem',
+            },
 
             '& span': {
                 color: theme.palette.primary.main,
             },
         },
-    },
-    owm: {
-        marginBottom: '.2rem',
-
-        '& h4': {
-            display: 'inline',
-            fontWeight: theme.typography.fontWeightMedium,
-
-            [theme.breakpoints.down('sm')]: {
-                fontSize: '.8rem',
-            },
-        },
-
         '& a': {
             textDecoration: 'none',
             color: theme.palette.primary.main,
             transition: 'all 200ms ease-in-out',
+            fontSize: '.9rem',
 
             '&:hover': {
                 color: theme.palette.primary.darker,
             },
-
             [theme.breakpoints.down('sm')]: {
-                fontSize: '.8rem',
-            },
-        },
-    },
-    cityData: {
-        '& h4': {
-            display: 'inline',
-            fontWeight: theme.typography.fontWeightMedium,
-
-            [theme.breakpoints.down('sm')]: {
-                fontSize: '.8rem',
-            },
-        },
-
-        '& a': {
-            textDecoration: 'none',
-            color: theme.palette.primary.main,
-            transition: 'all 200ms ease-in-out',
-
-            '&:hover': {
-                color: theme.palette.primary.darker,
-            },
-
-            [theme.breakpoints.down('sm')]: {
-                fontSize: '.8rem',
+                fontSize: '.72rem',
             },
         },
     },
@@ -178,12 +166,17 @@ const useStyles = makeStyles(theme => ({
     toggleBtn: {
         width: '90%',
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'space-around',
         padding: '1rem 0 .6rem 0',
 
         '& .MuiTypography-body1': {
             fontSize: '1.1rem',
             fontWeight: '300',
+            textAlign: 'center',
+        },
+
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
         },
     },
     toggleBtnContainer: {

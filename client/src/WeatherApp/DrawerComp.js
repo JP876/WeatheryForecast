@@ -47,20 +47,57 @@ const DrawerComponent = props => {
                 </React.Fragment>
             ) : (
                 <div className={classes.intro}>
-                    <div className={classes.introImg} />
-                    <Button
-                        variant='contained'
-                        color='primary'
-                        size='medium'
-                        onClick={getHomeWeather}
-                        startIcon={<HomeIcon />}
-                        disabled={homeBtn.current ? !homeBtn.current.show : false}
-                    >
-                        Weather Forecast
-                    </Button>
-                    {homeBtn.current && homeBtn.current.msg && (
-                        <h4>{homeBtn.current.msg}</h4>
-                    )}
+                    <div className={classes.introContainer}>
+                        <div className={classes.introImg} />
+                        <Button
+                            variant='contained'
+                            color='primary'
+                            size='medium'
+                            onClick={getHomeWeather}
+                            startIcon={<HomeIcon />}
+                            disabled={homeBtn.current ? !homeBtn.current.show : false}
+                        >
+                            Weather Forecast
+                        </Button>
+                        {homeBtn.current && homeBtn.current.msg && (
+                            <h4>{homeBtn.current.msg}</h4>
+                        )}
+                    </div>
+                    <div className={classes.copyright}>
+                        <div>
+                            <h4>Powered by </h4>
+                            <a
+                                href='https://openweathermap.org/'
+                                target='_blank'
+                                rel='noreferrer'
+                            >
+                                OpenWeatherMap
+                            </a>
+                        </div>
+                        <div>
+                            <h4>World Cities Database from </h4>
+                            <a
+                                href='https://simplemaps.com/data/world-cities'
+                                target='_blank'
+                                rel='noreferrer'
+                            >
+                                SimpleMaps
+                            </a>
+                        </div>
+                        <div>
+                            <h4>Vector for favicon created by macrovector from </h4>
+                            <a
+                                target='_blank'
+                                rel='noreferrer'
+                                href='https://www.freepik.com/free-photos-vectors/background'
+                            >
+                                freepik
+                            </a>
+                        </div>
+                        <h4>
+                            Made with React by <span>Josip Popović</span>
+                        </h4>
+                    </div>
                 </div>
             )}
             <Divider />

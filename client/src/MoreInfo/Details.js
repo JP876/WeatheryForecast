@@ -176,7 +176,7 @@ const Details = props => {
                     </div>
                     <Divider className={classes.divider} />
                     <div className={classes.copyright}>
-                        <div className={classes.owm}>
+                        <div>
                             <h4>Powered by </h4>
                             <a
                                 href='https://openweathermap.org/'
@@ -186,7 +186,7 @@ const Details = props => {
                                 OpenWeatherMap
                             </a>
                         </div>
-                        <div className={classes.cityData}>
+                        <div>
                             <h4>World Cities Database from </h4>
                             <a
                                 href='https://simplemaps.com/data/world-cities'
@@ -194,6 +194,16 @@ const Details = props => {
                                 rel='noreferrer'
                             >
                                 SimpleMaps
+                            </a>
+                        </div>
+                        <div>
+                            <h4>Vector for favicon created by macrovector from </h4>
+                            <a
+                                target='_blank'
+                                rel='noreferrer'
+                                href='https://www.freepik.com/free-photos-vectors/background'
+                            >
+                                freepik
                             </a>
                         </div>
                         <h4>
