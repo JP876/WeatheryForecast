@@ -1,4 +1,4 @@
-#WeatheryForecast
+# WeatheryForecast
 
 WeatheryForecast is a weather app that includes weather map layers and weather forecast of the chosen city. You can access it [here](https://weathery-forecast.herokuapp.com).
 
@@ -6,7 +6,7 @@ WeatheryForecast is a weather app that includes weather map layers and weather f
 
 ---
 
-##Features
+## Features
 
 -   current weather, hourly forecast for 2 days, and daily forecast for 7 days.
 -   temperature for 2 days and 7 days shown graphically
@@ -16,7 +16,7 @@ WeatheryForecast is a weather app that includes weather map layers and weather f
 
 ---
 
-##Stack
+## Stack
 
 #### Front-end
 
@@ -38,6 +38,6 @@ WeatheryForecast is a weather app that includes weather map layers and weather f
 
 ---
 
-##Contact
+## Contact
 
 If you have any questions or feedback, feel free to send an email on: popovicjosip867@gmail.com
